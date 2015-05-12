@@ -1,0 +1,15 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/icon" android:id="@+id/rounded_corners"
+        android:left="50px"
+        android:bottom="50px"
+        />
+    <item android:drawable="@drawable/icon" android:id="@+id/rounded_corners"
+        android:right="50px"
+        android:bottom="50px"
+        />
+     <item android:drawable="@drawable/icon" android:id="@+id/rounded_corners"
+        android:left="50px"
+        android:bottom="50px"
+        />
+    <item android:drawable="@drawable/ic_launcher" android:id="@+id/additional_image" />
+</layer-list>

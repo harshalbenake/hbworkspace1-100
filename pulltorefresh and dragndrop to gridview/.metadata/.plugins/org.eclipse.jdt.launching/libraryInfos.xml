@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="/usr/java/jdk1.7.0_21" version="1.7.0_21">
+<bootpath>
+<entry path="/usr/java/jdk1.7.0_21/jre/lib/resources.jar"/>
+<entry path="/usr/java/jdk1.7.0_21/jre/lib/rt.jar"/>
+<entry path="/usr/java/jdk1.7.0_21/jre/lib/sunrsasign.jar"/>
+<entry path="/usr/java/jdk1.7.0_21/jre/lib/jsse.jar"/>
+<entry path="/usr/java/jdk1.7.0_21/jre/lib/jce.jar"/>
+<entry path="/usr/java/jdk1.7.0_21/jre/lib/charsets.jar"/>
+<entry path="/usr/java/jdk1.7.0_21/jre/lib/jfr.jar"/>
+<entry path="/usr/java/jdk1.7.0_21/jre/classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="/usr/java/jdk1.7.0_21/jre/lib/ext"/>
+<entry path="/usr/java/packages/lib/ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="/usr/java/jdk1.7.0_21/jre/lib/endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="/usr/java/jdk1.7.0_21/jre" version="1.7.0_21">
+<bootpath>
+<entry path="/usr/java/jdk1.7.0_21/jre/lib/resources.jar"/>
+<entry path="/usr/java/jdk1.7.0_21/jre/lib/rt.jar"/>
+<entry path="/usr/java/jdk1.7.0_21/jre/lib/sunrsasign.jar"/>
+<entry path="/usr/java/jdk1.7.0_21/jre/lib/jsse.jar"/>
+<entry path="/usr/java/jdk1.7.0_21/jre/lib/jce.jar"/>
+<entry path="/usr/java/jdk1.7.0_21/jre/lib/charsets.jar"/>
+<entry path="/usr/java/jdk1.7.0_21/jre/lib/jfr.jar"/>
+<entry path="/usr/java/jdk1.7.0_21/jre/classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="/usr/java/jdk1.7.0_21/jre/lib/ext"/>
+<entry path="/usr/java/packages/lib/ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="/usr/java/jdk1.7.0_21/jre/lib/endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>

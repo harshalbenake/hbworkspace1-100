@@ -1,0 +1,26 @@
+!SESSION 2013-12-12 10:22:00.842 -----------------------------------------------
+eclipse.buildId=v21.1.0-569685
+java.version=1.7.0_21
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product -product com.android.ide.eclipse.adt.package.product
+Command-line arguments:  -os linux -ws gtk -arch x86 -product com.android.ide.eclipse.adt.package.product -data /home/harshalb/Desktop/home pressed -product com.android.ide.eclipse.adt.package.product
+
+!ENTRY com.android.ide.eclipse.ddms 4 0 2013-12-12 10:22:05.295
+!MESSAGE DDMS files not found: /home/harshalb/platform-tools/adb /home/harshalb/tools/hprof-conv /home/harshalb/tools/traceview 
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-12-12 10:22:34.137
+!MESSAGE Failed to load properties file for project 'home'
+!SESSION 2013-12-12 11:32:05.614 -----------------------------------------------
+eclipse.buildId=v21.1.0-569685
+java.version=1.7.0_21
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product -product com.android.ide.eclipse.adt.package.product
+Command-line arguments:  -os linux -ws gtk -arch x86 -product com.android.ide.eclipse.adt.package.product -data /home/harshalb/Desktop/home pressed -product com.android.ide.eclipse.adt.package.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-12-12 11:32:07.311
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-12-12 11:32:38.737
+!MESSAGE Failed to load properties file for project 'sdfsdf'

@@ -1,0 +1,175 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linlaymain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+   
+  <RelativeLayout 
+      android:layout_height="wrap_content"
+      android:layout_width="fill_parent"
+      android:id="@+id/rellaydesp"
+      android:background="#424242">
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_centerVertical="true"
+          android:orientation="horizontal" >
+
+          <ImageView
+              android:id="@+id/imageView1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@drawable/ic_launcher" />
+          
+            <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical" >
+              <TextView
+              android:id="@+id/textView1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="#ffffff"
+              android:text="Large Text"
+              android:textAppearance="?android:attr/textAppearanceLarge" />
+
+              <TextView
+              android:id="@+id/textView2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Medium Text"
+              android:textColor="#ffffff"
+              android:textAppearance="?android:attr/textAppearanceMedium" />
+          </LinearLayout>
+      </LinearLayout>
+      
+      </RelativeLayout>
+   
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:id="@+id/linlaysvtitletop"
+       android:background="#848484">
+       <ImageView
+              android:id="@+id/ivsvtitletop"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@drawable/ic_launcher" />
+        
+       <TextView
+        android:id="@+id/tvsvtitletop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MY FEATURED APPS"
+        android:textColor="#ffffff"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+       
+      </LinearLayout>
+ <com.krish.horizontalscrollview.CenterLockHorizontalScrollview.CenterLockHorizontalScrollview
+        android:id="@+id/hbtrysv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </com.krish.horizontalscrollview.CenterLockHorizontalScrollview.CenterLockHorizontalScrollview>
+    
+   
+        <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:id="@+id/linlaysvtitlebot"
+       android:background="#848484">
+       <ImageView
+              android:id="@+id/ivsvtitlebot"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@drawable/ic_launcher" />
+        
+       <TextView
+        android:id="@+id/tvsvtitlebot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MY FEATURED GAMES"
+        android:textColor="#ffffff"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+      </LinearLayout>
+      
+  <com.krish.horizontalscrollview.CenterLockHorizontalScrollview.CenterLockHorizontalScrollview
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </com.krish.horizontalscrollview.CenterLockHorizontalScrollview.CenterLockHorizontalScrollview>
+   
+  
+  
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:id="@+id/linlaysvtitlethree"
+       android:background="#848484">
+       <ImageView
+              android:id="@+id/ivsvtitlethree"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@drawable/ic_launcher" />
+        
+       <TextView
+        android:id="@+id/tvsvtitlethree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MY FEATURED BOOKS"
+        android:textColor="#ffffff"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+      </LinearLayout>
+      
+  <com.krish.horizontalscrollview.CenterLockHorizontalScrollview.CenterLockHorizontalScrollview
+        android:id="@+id/hbsvthree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </com.krish.horizontalscrollview.CenterLockHorizontalScrollview.CenterLockHorizontalScrollview>
+   
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Prev"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Next" 
+            android:visibility="gone"/>
+    </LinearLayout>
+  
+</LinearLayout>

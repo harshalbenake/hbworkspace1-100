@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ui_bg_medium_gray"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/gallery_bt"
+        style="@style/button_plain"
+        android:layout_margin="@dimen/global_padding"
+        android:text="@string/pin_gallery" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/global_padding"
+        android:background="@android:color/white" >
+
+        <ImageView
+            android:id="@+id/source_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/image_height"
+            android:minWidth="250dp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/uri_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:text="@string/image_uri"
+        android:textSize="11dp" />
+
+    <TextView
+        android:id="@+id/desc_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/global_padding"
+        android:text="@string/pin_desc_gallery" />
+
+    <com.pinterest.pinit.PinItButton
+        android:id="@+id/pin_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/global_padding" />
+
+</LinearLayout>

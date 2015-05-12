@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">ListViewWithJSONFromURL</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>    
+    <string name="title_activity_main">ListView with JSON From URL</string>
+    <string name="str_iv_flag">Flag</string>
+    
+</resources>

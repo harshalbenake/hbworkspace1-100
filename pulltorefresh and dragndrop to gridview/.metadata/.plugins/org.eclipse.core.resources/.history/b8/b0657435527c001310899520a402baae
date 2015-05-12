@@ -1,0 +1,337 @@
+package com.example.locationhb;
+
+import java.util.Calendar;
+import java.util.Timer;
+
+import android.app.Activity;
+import android.app.Dialog;
+import android.content.Context;
+import android.graphics.Color;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationManager;
+import android.os.Bundle;
+import android.text.Html;
+import android.util.Log;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesClient;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.location.LocationClient;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
+
+/**
+ * This class is used to manage get location periodically & calculate their distance. 
+ * @author Amol Wadekar
+ */
+public class LocationManagerTXTShield  implements
+GooglePlayServicesClient.ConnectionCallbacks,
+GooglePlayServicesClient.OnConnectionFailedListener,
+LocationListener{
+	private static Timer timer = new Timer();
+	public static boolean isServicesConnected=false;
+	private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
+	Location mOldLocation;
+	Location mCurrentLocation;
+
+	// Milliseconds per second
+	private static final int MILLISECONDS_PER_SECOND = 1000;
+	// Update frequency in seconds
+	public static final int UPDATE_INTERVAL_IN_SECONDS = 30;
+	// Update frequency in milliseconds
+	private static final long UPDATE_INTERVAL =
+		MILLISECONDS_PER_SECOND * UPDATE_INTERVAL_IN_SECONDS;
+	// The fastest update frequency, in seconds
+	private static final int FASTEST_INTERVAL_IN_SECONDS = 30;
+	// A fast frequency ceiling in milliseconds
+	private static final long FASTEST_INTERVAL =
+		MILLISECONDS_PER_SECOND * FASTEST_INTERVAL_IN_SECONDS;
+	// Define an object that holds accuracy and frequency parameters
+	LocationRequest mLocationRequest;
+
+	/**'static' so that single object will be in memory & no more connection will be established.*/
+	static LocationClient mLocationClient;
+	Context context;
+
+	public  LocationManagerTXTShield(Context context) {
+		this.context=context;
+		System.out.println("onHandleIntent");
+	}
+
+	/**
+	 * This method is used to initialize network connection.
+	 */
+	public void initializedNetworkConnection(){
+		if(Utility.isConnected(context)){
+		/*	TxtShieldActivityManager tManager=new TxtShieldActivityManager();
+			tManager.initializeGPSSettings(context);*/
+
+			mLocationClient = new LocationClient(context, this, this);
+
+			mLocationClient.connect();
+			
+			initializeLocationRequest();
+		}
+	}
+
+	/**
+	 * This method is used to initialized location request.
+	 */
+	private void initializeLocationRequest(){
+		System.out.println("LocationManager L3 initializeLocationRequest ");
+		try {
+			/***/
+			/**Help Site : http://developer.android.com/reference/com/google/android/gms/location/LocationRequest.html*/
+			// Create the LocationRequest object
+			mLocationRequest = LocationRequest.create();
+			// Use high accuracy
+			mLocationRequest.setPriority(
+					LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
+			// Set the update interval to 5 seconds
+			mLocationRequest.setInterval(UPDATE_INTERVAL);
+			// Set the fastest update interval to 1 second
+			mLocationRequest.setFastestInterval(FASTEST_INTERVAL);
+
+			mLocationClient.requestLocationUpdates(mLocationRequest, this);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("LocationManager L4 mLocationRequest "+mLocationRequest);
+	}
+
+	/**
+	 * This method is used to check whether Google Play services is available or not.
+	 * @return boolean true/false
+	 */
+	public boolean servicesConnected(Activity activity) {
+		// Check that Google Play services is available
+		int resultCode =
+			GooglePlayServicesUtil.
+			isGooglePlayServicesAvailable(activity);
+
+		if (ConnectionResult.SUCCESS == resultCode) {
+			// If Google Play services is available
+			System.out.println("Google Play services is available.");
+			isServicesConnected=true;
+			return isServicesConnected;
+		} else {
+			// If Google Play services is not available
+			System.out.println("Google Play services is not available.");
+
+			// Get the error dialog from Google Play services
+			Dialog errorDialog = GooglePlayServicesUtil.getErrorDialog(
+					resultCode,
+					activity,
+					CONNECTION_FAILURE_RESOLUTION_REQUEST);
+			// If Google Play services can provide an error dialog
+			if (errorDialog != null) {
+				errorDialog.show();
+
+			}else{
+				Toast.makeText(context, "Google Play services is not available on your device, without this service this application is not working.", Toast.LENGTH_SHORT).show();
+			}
+			isServicesConnected=false;
+			return isServicesConnected;
+		}
+
+	}
+
+
+	/**
+	 * This method is used to 
+	 */
+	public boolean isNetworkConnected() {
+		boolean flag=false;
+		if(mLocationClient!=null){
+			flag=mLocationClient.isConnected();
+		}
+		System.out.println("LocationManager L1 Location Provider isNetworkConnected "+flag+" mLocationRequest "+mLocationRequest);
+
+		if(flag==true && mLocationRequest==null){
+			///Some times location request is not initialized.
+			System.out.println("LocationManager L2");
+			initializeLocationRequest();
+		}
+		return flag;
+	}
+
+	@Override
+	public void onConnectionFailed(ConnectionResult arg0) {
+		Toast.makeText(context, "Connection Failed", Toast.LENGTH_SHORT).show();
+	}
+
+	@Override
+	public void onConnected(Bundle arg0) {
+		try {
+			System.out.println("onHandleIntent L5");
+			//			Toast.makeText(context, "Connected", Toast.LENGTH_SHORT).show();
+			initializeLocationRequest();
+			System.out.println("onHandleIntent L6");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void onDisconnected() {
+		Toast.makeText(context, "Disconnected. Please re-connect.",Toast.LENGTH_SHORT).show();
+	}
+
+	
+	@Override
+	public void onLocationChanged(Location location) {
+		// Report to the UI that the location was updated
+
+		Calendar cal=Calendar.getInstance();
+		float speed_mps=location.getSpeed();
+
+		float speed_kmphr=speed_mps*(3600/1000);
+		//validateSpeedLimit(speed_kmphr);
+
+		Criteria locationCriteria = new Criteria(); 
+		String Accuracy = locationCriteria.getAccuracy()+"";
+		String PowerRequirement = locationCriteria.getPowerRequirement()+"";
+		
+		LocationManager locationManager=(LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+
+
+		String locationbest = locationManager.getBestProvider(locationCriteria, true);
+		if(location != null) {
+			locationManager.requestLocationUpdates(location, 2000, 1, this);
+			} 
+		else {
+			System.out.println("No location providers available");
+		}
+
+		String timeStamp=cal.get(Calendar.HOUR)+":"+cal.get(Calendar.MINUTE)+":"+cal.get(Calendar.SECOND);
+		String msg = timeStamp+" Updated Location: " +
+		"<br> "+Double.toString(location.getLatitude()) + "," +
+		Double.toString(location.getLongitude()) +
+		"  <br> speed <font color='#ff00ff'> "+speed_mps+" meter/sec  </font>"+
+		"  <font color='#ff0000'> "+speed_kmphr+"km/hr </font>";
+		System.out.println(msg);
+
+		TextView txtLat = new TextView(context);
+		txtLat.setText(Html.fromHtml(msg));
+		txtLat.setBackgroundColor(Color.GREEN);
+		txtLat.setTextColor(Color.BLACK);
+		txtLat.setPadding(5, 10, 5, 10);
+
+		Toast t=new Toast(context);
+		t.setView(txtLat);
+		t.setDuration(Toast.LENGTH_LONG);
+		t.show();
+
+		/**Calculate distance based on latitude & longitude.*/
+		//		{
+		//			double dist=claculateDistance.getDistabce(mOldLocation,location);
+		//			mOldLocation=location;
+		//			System.out.println("Custom Calculation Distance "+dist);
+		//			msg=msg+"<br> ***"+dist+"***";
+		//		}		
+
+	}
+
+	/**
+	 * This method is used to validate current speed with adin speed limit. 
+	 */
+/*	private void validateSpeedLimit(float currentSpeed){
+		try{
+			PreferncesManagerClass managerClass=new PreferncesManagerClass(context);
+			boolean isActivateTXTShieldMode=managerClass.getTXTShieldMode();
+			AccountManager accountManager=new AccountManager(context);
+			if(accountManager.isUserRegistered(context)){
+				Account account=accountManager.getUserDetails(context);
+				if(account!=null && account.active_speed!=null && !account.active_speed.equalsIgnoreCase("")){
+					int speedLimit=Integer.parseInt(account.active_speed);
+					if(speedLimit<=currentSpeed){
+						TxtShieldActivityManager tManager=new TxtShieldActivityManager();
+						tManager.activateTXTShieldMode(context);
+					}else if(speedLimit>currentSpeed && isActivateTXTShieldMode){
+						TxtShieldActivityManager tManager=new TxtShieldActivityManager();
+						tManager.deActivateTXTShieldMode(context);
+					}
+				}
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+*/
+
+	/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+	/*::                                                                         :*/
+	/*::  This routine calculates the distance between two points (given the     :*/
+	/*::  latitude/longitude of those points). It is being used to calculate     :*/
+	/*::  the distance between two locations using GeoDataSource (TM) prodducts  :*/
+	/*::                                                                         :*/
+	/*::  Definitions:                                                           :*/
+	/*::    South latitudes are negative, east longitudes are positive           :*/
+	/*::                                                                         :*/
+	/*::  Passed to function:                                                    :*/
+	/*::    lat1, lon1 = Latitude and Longitude of point 1 (in decimal degrees)  :*/
+	/*::    lat2, lon2 = Latitude and Longitude of point 2 (in decimal degrees)  :*/
+	/*::    unit = the unit you desire for results                               :*/
+	/*::           where: 'M' is statute miles                                   :*/
+	/*::                  'K' is kilometers (default)                            :*/
+	/*::                  'N' is nautical miles                                  :*/
+	/*::  Worldwide cities and other features databases with latitude longitude  :*/
+	/*::  are available at http://www.geodatasource.com                          :*/
+	/*::                                                                         :*/
+	/*::  For enquiries, please contact sales@geodatasource.com                  :*/
+	/*::                                                                         :*/
+	/*::  Official Web site: http://www.geodatasource.com                        :*/
+	/*::                                                                         :*/
+	/*::           GeoDataSource.com (C) All Rights Reserved 2013                :*/
+	/*::                                                                         :*/
+	/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+	static class claculateDistance{
+
+		static double getDistabce(Location oldLocation, Location currentLocation){
+			if(oldLocation!=null && currentLocation!=null)
+				return distance(oldLocation.getLatitude(),oldLocation.getLongitude(),currentLocation.getLatitude(),currentLocation.getLongitude(),"K");
+			else return 0;
+		}
+
+
+
+		/**
+		 * system.println(distance(32.9697, -96.80322, 29.46786, -98.53506, "M") + " Miles\n");
+		 * system.println(distance(32.9697, -96.80322, 29.46786, -98.53506, "K") + " Kilometers\n");
+		 * system.println(distance(32.9697, -96.80322, 29.46786, -98.53506, "N") + " Nautical Mil);
+		 */
+		private static double distance(double lat1, double lon1, double lat2, double lon2, String unit) {
+			double theta = lon1 - lon2;
+			double dist = Math.sin(deg2rad(lat1)) * Math.sin(deg2rad(lat2)) + Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * Math.cos(deg2rad(theta));
+			dist = Math.acos(dist);
+			dist = rad2deg(dist);
+			dist = dist * 60 * 1.1515;
+			if (unit.equalsIgnoreCase("K")){
+				dist = dist * 1.609344;
+			} else if (unit.equalsIgnoreCase("N")) {
+				dist = dist * 0.8684;
+			}
+			return (dist);
+		}
+
+		/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+		/*::  This function converts decimal degrees to radians             :*/
+		/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+		private static double deg2rad(double deg) {
+			return (deg * Math.PI / 180.0);
+		}
+
+		/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+		/*::  This function converts radians to decimal degrees             :*/
+		/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+		private static double rad2deg(double rad) {
+			return (rad * 180 / Math.PI);
+		}
+
+
+	}
+
+}

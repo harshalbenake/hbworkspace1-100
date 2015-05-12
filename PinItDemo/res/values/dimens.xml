@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_height">40dp</dimen>
+    <dimen name="button_side_padding">12dp</dimen>
+    <dimen name="global_padding">12dp</dimen>
+    <dimen name="image_height">200dp</dimen>
+    <dimen name="row_height">100dp</dimen>
+</resources>

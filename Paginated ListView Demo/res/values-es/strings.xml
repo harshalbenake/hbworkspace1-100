@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (C) 2012 Daniel Medina <http://danielme.com>
+ * 
+ * This file is part of "Android Paginated ListView Demo".
+ * 
+ * "Android Paginated ListView Demo" is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, version 3.
+ *
+ * "Android Paginated ListView Demo" is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License version 3
+ * along with this program.  If not, see <http://www.gnu.org/licenses/gpl-3.0.html/>
+ */
+--> 
+<resources>
+
+    <string name="app_name">Paginated ListView Demo - danielme.com</string>
+    <string name="endless">Endless ListView</string>
+    <string name="loadmorebutton">Load More Button</string>
+    <string name="buttons">Paging Buttons</string>
+    <string name="display">Mostrando %1$s de %2$s</string>
+    <string name="selected"> seleccionada</string>
+    <string name="loadmore">Cargar más</string>
+    <string name="displayshort">%1$s - %2$s de %3$s</string>
+    <string name="first">primero</string>
+    <string name="previous">anterior</string>
+    <string name="next">siguiente</string>
+    <string name="last">último</string>
+    <string name="image">imagen</string>
+    <string name="test">test</string>
+    
+    
+
+</resources>

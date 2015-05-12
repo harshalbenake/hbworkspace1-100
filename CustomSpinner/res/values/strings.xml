@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    
+    <string name="hello">Custom Spinner</string>
+    <string name="defaultText">  Select your Company  </string>
+    <string name="app_name">CustomSpinner Demo</string>
+    <drawable name="Blue">#b0e0e6</drawable>
+    <drawable name="white">#ffffff</drawable>
+    <drawable name="black">#000000</drawable>
+    <drawable name="green">#347C2C</drawable>
+    <drawable name="pink">#FF00FF</drawable>
+    <drawable name="violet">#a020f0</drawable>
+    <drawable name="grey">#cccccc</drawable>
+    <drawable name="red">#C11B17</drawable>
+    <drawable name="yellow">#FFFF8C</drawable>
+    <drawable name="PowderBlue">#b0e0e6</drawable>
+    <drawable name="brown">#2F1700</drawable>
+    <string name="select_Category">Select Company</string>
+    <drawable name="darkgrey">#606060</drawable>
+
+</resources>

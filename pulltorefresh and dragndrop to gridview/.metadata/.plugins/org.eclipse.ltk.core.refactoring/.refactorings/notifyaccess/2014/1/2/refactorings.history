@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.example.notifyaccess.MainActivity&apos; to &apos;notiaccess&apos;&#x0A;- Original project: &apos;notifyaccess&apos;&#x0A;- Original element: &apos;com.example.notifyaccess.MainActivity&apos;&#x0A;- Renamed element: &apos;com.example.notifyaccess.notiaccess&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MainActivity&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.example.notifyaccess{MainActivity.java[MainActivity" matchStrategy="1" name="notiaccess" qualified="false" references="true" similarDeclarations="false" stamp="1389279211125" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rellay_giftcards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/gift_card_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="10dp"
+            android:text="Points"
+            android:textColor="#00ff00" />
+
+        <ImageView
+            android:id="@+id/gift_card_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/gift_card_points"
+            android:paddingLeft="10dp" />
+
+        <LinearLayout
+            android:id="@+id/linlay_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/gift_card_image"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp" >
+
+            <ImageView
+                android:id="@+id/button_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/minus_img"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/countitem"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/button_minus"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text=""
+                android:textColor="@android:color/white" >
+            </EditText>
+
+            <ImageView
+                android:id="@+id/button_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/plus_img"
+                android:textColor="@android:color/white" />
+
+            <CheckBox
+                android:id="@+id/checkboxcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

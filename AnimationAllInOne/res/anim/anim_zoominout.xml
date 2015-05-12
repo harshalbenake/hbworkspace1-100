@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <scale xmlns:android="http://schemas.android.com/apk/res/android"
+      android:fromXScale="0.5"
+      android:toXScale="3.0"
+      android:fromYScale="0.5"
+      android:toYScale="3.0"
+      android:duration="5000"
+      android:pivotX="50%"
+      android:pivotY="50%" >
+
+   </scale>
+
+
+   <scale xmlns:android="http://schemas.android.com/apk/res/android"
+      android:startOffset="5000"
+      android:fromXScale="3.0"
+      android:toXScale="0.5"
+      android:fromYScale="3.0"
+      android:toYScale="0.5"
+      android:duration="5000"
+      android:pivotX="50%"
+      android:pivotY="50%" >
+
+   </scale>
+
+</set>

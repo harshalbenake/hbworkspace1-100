@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<string-array name="livewallpaper_testpattern_names">
+		<item>"Color Bars 16x9"</item>
+		<item>"Color Bars 4x3"</item>
+		<item>"EBU Color Bars"</item>
+	</string-array>
+
+	<string-array name="livewallpaper_testpattern_prefix">
+		<item>"smpte"</item>
+		<item>"bars"</item>
+		<item>"ebu"</item>
+	</string-array>
+
+	<integer-array name="smptecolors">
+		<item>0xFF696969</item>
+		<item>0xFFC1C1C1</item>
+		<item>0xFFC1C100</item>
+		<item>0xFF00C1C1</item>
+		<item>0xFF00C100</item>
+		<item>0xFFC100C1</item>
+		<item>0xFFC10000</item>
+		<item>0xFF0000C1</item>
+		<item>0xFF696969</item>
+		<item>0xFF00FFFF</item>
+		<item>0xFFFFFF00</item>
+		<item>0xFF052550</item>
+		<item>0xFF36056D</item>
+		<item>0xFF0000FF</item>
+		<item>0xFFFF0000</item>
+		<item>0xFFC1C1C1</item>
+		<item>0xFF2B2B2B</item>
+		<item>0xFF050505</item>
+		<item>0xFFFFFFFF</item>
+		<item>0xFF050505</item>
+		<item>0xFF000000</item>
+		<item>0xFF050505</item>
+		<item>0xFF0A0A0A</item>
+		<item>0xFF050505</item>
+		<item>0xFF0D0D0D</item>
+		<item>0xFF050505</item>
+		<item>0xFF2b2b2b</item>
+	</integer-array>
+
+	<integer-array name="barscolors">
+		<item>0xFFC0C0C0</item>
+		<item>0xFFC0C000</item>
+		<item>0xFF00C0C0</item>
+		<item>0xFF00C000</item>
+		<item>0xFFC000C0</item>
+		<item>0xFFC00000</item>
+		<item>0xFF0000C0</item>
+		<item>0xFF0000C0</item>
+		<item>0xFF131313</item>
+		<item>0xFFC000C0</item>
+		<item>0xFF131313</item>
+		<item>0xFF00C0C0</item>
+		<item>0xFF131313</item>
+		<item>0xFFC0C0C0</item>
+		<item>0xFF00214C</item>
+		<item>0xFFFFFFFF</item>
+		<item>0xFF32006A</item>
+		<item>0xFF131313</item>
+		<item>0xFF090909</item>
+		<item>0xFF131313</item>
+		<item>0xFF1D1D1D</item>
+		<item>0xFF131313</item>
+	</integer-array>
+
+	<integer-array name="ebucolors">
+		<item>0xFFBFBFBF</item>
+		<item>0xFFBFBF00</item>
+		<item>0xFF00BFBF</item>
+		<item>0xFF00BF00</item>
+		<item>0xFFBF00BF</item>
+		<item>0xFFBF0000</item>
+		<item>0xFF0000BF</item>
+		<item>0xFF000000</item>
+	</integer-array>
+</resources>

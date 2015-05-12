@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2013 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/no_time_set" >
+        <item
+            android:id="@+id/set_timer"
+            android:title="@string/set_timer"
+            android:icon="@drawable/ic_lap" />
+    </group>
+    <group
+        android:id="@+id/time_set" >
+        <item
+            android:id="@+id/start"
+            android:title="@string/start"
+            android:icon="@drawable/ic_play" />
+        <item
+            android:id="@+id/resume"
+            android:title="@string/resume"
+            android:icon="@drawable/ic_play" />
+        <item
+            android:id="@+id/pause"
+            android:title="@string/pause"
+            android:icon="@drawable/ic_pause" />
+        <item
+            android:id="@+id/reset"
+            android:title="@string/reset"
+            android:icon="@drawable/ic_reset" />
+        <item
+            android:id="@+id/change_timer"
+            android:title="@string/change_time"
+            android:icon="@drawable/ic_lap" />
+    </group>
+    <item
+        android:id="@+id/stop"
+        android:title="@string/stop"
+        android:icon="@drawable/ic_stop" />
+</menu>

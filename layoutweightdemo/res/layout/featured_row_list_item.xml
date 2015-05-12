@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linlay_featured_row_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+     >
+
+    <ImageView
+        android:id="@+id/featured_itemlayout_appitem_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     	android:layout_alignParentLeft="true"
+        android:src="@drawable/featured_itemlayout_appitem_image" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/featured_itemlayout_appitem_image"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/featured_itemlayout_appitem_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/featured_itemlayout_appcreator_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Gameloft"
+            android:textColor="#ffffff"
+            android:textSize="11sp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar1"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="3" />
+
+        <TextView
+            android:id="@+id/featured_itemlayout_appitem_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="free"
+            android:textColor="#b3b2b2"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/featured_itemlayout_install_button"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_below="@+id/featured_itemlayout_appitem_price"
+            android:background="@drawable/app_install_img"
+            android:clickable="true" />
+
+    </LinearLayout>
+
+</RelativeLayout>

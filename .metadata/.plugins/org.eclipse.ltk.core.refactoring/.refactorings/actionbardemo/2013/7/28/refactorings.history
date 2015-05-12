@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;anim&apos; to &apos;res&apos;&#x0A;- Original project: &apos;actionbardemo&apos;&#x0A;- Destination element: &apos;res&apos;&#x0A;- Original element: &apos;anim&apos;" description="Copy folder" element1="res/anim" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1373636760355" target="/actionbarnavigationdemo/res" units="0" version="1.0"/>
+</session>

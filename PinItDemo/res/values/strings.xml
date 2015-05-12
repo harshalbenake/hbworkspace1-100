@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PinItDemo</string>
+    <string name="simple_name">PDemoSimple</string>
+    <string name="gallery_name">PDemoGallery</string>
+    <string name="listview_name">PDemoList</string>
+    <string name="menu_settings">Settings</string>
+    <string name="pin_image">Pin above image</string>
+    <string name="pin_gallery">Select one image from gallery</string>
+    <string name="pin_desc_kitten">This is a place kitten</string>
+    <string name="pin_desc_gallery">This image is from gallery</string>
+    <string name="pin_desc_hint">Pin description</string>
+    <string name="image_uri">Image Uri: </string>
+</resources>

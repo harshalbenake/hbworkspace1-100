@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;zoomtry/res/anim/zoom.xml&apos; to &apos;zoomon.xml&apos;" description="Rename resource &apos;zoom.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="res/anim/zoom.xml" name="zoomon.xml" stamp="1373348531675" updateReferences="true"/>
+</session>

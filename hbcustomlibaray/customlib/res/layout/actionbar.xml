@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/actionbar_base_layout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/actionbar_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="3dp"
+            android:scaleType="centerInside"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/actionbar_home_logo"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_toRightOf="@id/actionbar_back_btn"
+            android:scaleType="centerInside"
+             />
+
+        <LinearLayout
+            android:id="@+id/actionbar_extramenuitem_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="2dp"
+            android:background="#00000000"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/actionbar_search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="2dp"
+            android:layout_toLeftOf="@id/actionbar_extramenuitem_layout"
+            android:background="#00000000"
+            android:padding="10dp"
+           
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/actionbar_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@id/actionbar_search_button"
+            android:layout_toRightOf="@id/actionbar_home_logo"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="Apps"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </RelativeLayout>
+    <!-- Base Layout -->
+
+    <RelativeLayout
+        android:id="@+id/extended_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/extended_searchHome_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="3dp"
+                android:scaleType="centerInside"
+               />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerInside"
+               />
+        </LinearLayout>
+
+    
+        <com.txtshield.widgets.CustomAutoCompleteTextView
+            android:id="@+id/actionbar_search_edit_text"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/extended_searchHome_layout"
+           
+            android:hint="Search"
+            android:paddingLeft="3dp"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="16sp" 
+            android:completionThreshold="1"
+   
+        />
+
+        <ImageButton
+            android:id="@+id/actionbar_cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/actionbar_search_edit_text"
+            android:background="#00000000"
+            android:padding="15dp"
+             />
+    </RelativeLayout>
+    <!-- Search Layout -->
+
+</RelativeLayout>

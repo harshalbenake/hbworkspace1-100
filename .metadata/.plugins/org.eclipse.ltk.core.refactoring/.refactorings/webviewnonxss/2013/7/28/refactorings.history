@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ic_launcher.png&apos; to &apos;drawable-hdpi&apos;&#x0A;- Original project: &apos;webviewnonxss&apos;&#x0A;- Destination element: &apos;drawable-hdpi&apos;&#x0A;- Original element: &apos;ic_launcher.png&apos;" description="Copy file" element1="res/drawable-hdpi/ic_launcher.png" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1373619808389" target="/pulltorefreshlib/res/drawable-hdpi" units="0" version="1.0"/>
+</session>

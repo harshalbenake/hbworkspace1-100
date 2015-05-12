@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical" >
+
+    
+
+        <LinearLayout
+            android:id="@+id/linlay_reward_top_desp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/linlay_reward_top_desp_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Rewards"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Earn points to receive free pais Apps, Games, Books, and Music"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Apps Co rewards gives Android and iPhone / iPad users the opportunity to accumulate rewards points on purchases of apps, books, music, and more*. Similar to your credit card or airline rewards, points can be used to purchase paid apps, books, music, and products for free.Register to create your rewards account. All users receive points fro their purchases at no additional charge. Be sure to use the My Apps Co App or site to purchase all your apps, games, books, music, to earn rewards points. Login to your control panel to review and / or redeem points."
+                    android:textColor="@android:color/white"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher" />
+        </LinearLayout>
+
+        <ExpandableListView
+            android:id="@+id/rewardListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/gift_card_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Gift Card"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+        />
+    
+
+</LinearLayout>

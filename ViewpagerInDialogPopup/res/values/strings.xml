@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ViewpagerInDialogPopup</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+<string name="txtshieldmode_dialog_locationsetting_message1">1) Please place a checkmark in all checkboxes shown below to permit TXT Shield&#8482; to work most effectively.</string>
+    <string name="txtshieldmode_dialog_locationsetting_message2">2) Please press the “Back” button as shown below to return to the TXT Shield&#8482; application.</string>
+    
+</resources>

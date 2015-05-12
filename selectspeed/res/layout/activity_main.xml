@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+
+    <TextView
+        android:id="@+id/speedlimit_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/speedlimit_value" >
+
+        <LinearLayout
+            android:id="@+id/linlay_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <include
+                    android:id="@+id/speed_limit_10"
+                    layout="@layout/speed_limit" />
+
+                <include
+                    android:id="@+id/speed_limit_15"
+                    layout="@layout/speed_limit" />
+
+                <include
+                    android:id="@+id/speed_limit_20"
+                    layout="@layout/speed_limit" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <include
+                    android:id="@+id/speed_limit_25"
+                    layout="@layout/speed_limit" />
+
+                <include
+                    android:id="@+id/speed_limit_30"
+                    layout="@layout/speed_limit" />
+
+                <include
+                    android:id="@+id/speed_limit_35"
+                    layout="@layout/speed_limit" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" >
+
+                <include
+                    android:id="@+id/speed_limit_40"
+                    layout="@layout/speed_limit" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

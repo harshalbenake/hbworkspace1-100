@@ -1,0 +1,7 @@
+com.android.ide.eclipse.adt.fixLegacyEditors=1
+com.android.ide.eclipse.adt.previews=screens
+com.android.ide.eclipse.adt.sdk=/home/harshalb/Documents/android/adt-bundle-linux-x86-20130219/sdk
+com.android.ide.eclipse.adt.xmlEditor=true
+design.palette.flyout.width=203
+design.structure.flyout.width=188
+eclipse.preferences.version=1

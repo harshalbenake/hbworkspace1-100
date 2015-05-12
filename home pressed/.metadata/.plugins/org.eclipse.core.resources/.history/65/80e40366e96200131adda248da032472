@@ -1,0 +1,36 @@
+package com.example.home;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.util.Log;
+import android.view.Menu;
+
+public class MainActivity extends Activity {
+	   long userInteractionTime = 0;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+ 
+
+    @Override
+    public void onUserInteraction() {
+        userInteractionTime = System.currentTimeMillis();
+        super.onUserInteraction();
+        Log.i("appname","Interaction");
+    }
+
+    @Override
+    public void onUserLeaveHint() {
+        long uiDelta = (System.currentTimeMillis() - userInteractionTime);
+
+        super.onUserLeaveHint();
+        Log.i("bThere","Last User Interaction = "+uiLag);
+        if (uiDelta < 100)
+            Log.i("appname","Home Key Pressed");    
+        else
+            Log.i("appname","We are leaving, but will probably be back shortly!");  
+    }
+}

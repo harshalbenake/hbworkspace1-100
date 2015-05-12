@@ -1,0 +1,4 @@
+int anim icon_jiggle 0x7f030000
+int anim jiggle 0x7f030001
+int drawable content_discard 0x7f020000
+int string removeItem 0x7f040000
