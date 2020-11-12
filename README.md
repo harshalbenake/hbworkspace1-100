@@ -299,5 +299,3 @@ Description :- Simple video play in webview.
 
 (100)  Name :- zoomtry
 Description :- Zoom in and zoom out animation.
-
-**[How To Create Pagination With PHP And MySql](https://www.phpcodingstuff.com/blog/how-to-create-pagination-with-php-and-mysql.html)**
